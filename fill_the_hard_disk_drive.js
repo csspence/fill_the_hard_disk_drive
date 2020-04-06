@@ -14,6 +14,15 @@ save([4,4,4,3,3], 11) -> 2
 Do not expect any negative or invalid inputs.
 */
 
-function save(sizes, hd) {
-  // your code here
+const save = (sizes, hd) => {
+  let sum = 0;
+  let files = 0;
+  for(let i = 0; i < sizes.length; i++) {
+    if(sum + sizes[i] <= hd) {
+      sum += sizes[i];
+      files++;
+    }
+  }
+
+  return files;
 }
