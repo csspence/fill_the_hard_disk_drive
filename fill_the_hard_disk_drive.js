@@ -21,6 +21,8 @@ const save = (sizes, hd) => {
     if(sum + sizes[i] <= hd) {
       sum += sizes[i];
       files++;
+    } else {
+      break;
     }
   }
 
